@@ -11,7 +11,7 @@ class KintonePdf < Prawn::Document
     header
     table_header
     table_body
-    # development
+    development
   end
 
   def header
@@ -158,7 +158,12 @@ class KintonePdf < Prawn::Document
       row_2 = 377
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 395]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 395]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 395]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 395]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 395]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -195,7 +200,12 @@ class KintonePdf < Prawn::Document
       row_2 = 340
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 358]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 358]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 358]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 358]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 358]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -232,7 +242,12 @@ class KintonePdf < Prawn::Document
       row_2 = 303
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 321]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 321]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 321]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 321]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 321]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -269,7 +284,12 @@ class KintonePdf < Prawn::Document
       row_2 = 266
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 284]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 284]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 284]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 284]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 284]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -306,7 +326,12 @@ class KintonePdf < Prawn::Document
       row_2 = 229
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 247]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 247]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 247]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 247]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 247]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -343,7 +368,12 @@ class KintonePdf < Prawn::Document
       row_2 = 192
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 210]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 210]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 210]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 210]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 210]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -380,7 +410,12 @@ class KintonePdf < Prawn::Document
       row_2 = 155
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 173]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 173]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 173]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 173]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 173]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -417,7 +452,12 @@ class KintonePdf < Prawn::Document
       row_2 = 118
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 137]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 137]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 137]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 137]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 137]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -454,7 +494,12 @@ class KintonePdf < Prawn::Document
       row_2 = 81
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 100]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 100]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 100]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 100]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 100]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -491,7 +536,12 @@ class KintonePdf < Prawn::Document
       row_2 = 44
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 63]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 63]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 63]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 63]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 63]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
@@ -528,7 +578,12 @@ class KintonePdf < Prawn::Document
       row_2 = 7
       column_1 = 670
 
-      draw_text @post["record"]['table']['value'][record_id]['value']['ja_name']['value'], size: 7, at: [2, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-1], size: 12, at: [64, 25]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-2], size: 12, at: [49, 25]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-3], size: 12, at: [34, 25]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-4], size: 12, at: [19, 25]
+      draw_text @post["record"]['table']['value'][record_id]['value']['ja_code']['value'][-5], size: 12, at: [5, 25]
+      draw_text @post["record"]['table']['value'][record_id]['value']['abbreviation']['value'], size: 9, at: [2, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][0], size: 12, at: [125, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][1], size: 12, at: [140, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][2], size: 12, at: [155, row_2]
