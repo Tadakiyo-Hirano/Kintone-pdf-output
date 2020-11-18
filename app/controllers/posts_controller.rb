@@ -19,7 +19,7 @@ class PostsController < ApplicationController
         # @post = JSON.pretty_generate(JSON.parse(res.body))
       else
         %Q(#{res.code} #{res.message})
-        @post = JSON.parse(res.body)
+        JSON.parse(res.body)
       end
     }
 
