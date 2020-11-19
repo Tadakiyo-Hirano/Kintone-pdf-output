@@ -64,5 +64,5 @@ module ApplicationHelper
     line_count = arry.count("\r\n") if line_count == 0
     line_count += 1
     return line_count
-  end
+  end 
 end

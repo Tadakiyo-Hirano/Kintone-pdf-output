@@ -9,9 +9,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body>        
+    <p class="notice center"><%= notice %></p>
+    <p class="alert center"><%= alert %></p>
     <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

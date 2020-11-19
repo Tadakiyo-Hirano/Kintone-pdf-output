@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-
+  before_action :authenticate_user!
+  
   def show
     record_id = params[:id]
     api = Kintone::Api.new("#{ENV['DOMAIN']}.cybozu.com", ENV['ID'], ENV['PASSWORD'])
@@ -22,7 +23,7 @@ class PostsController < ApplicationController
         JSON.parse(res.body)
       end
     }
-
+    
     respond_to do |format|
       format.html
       format.pdf do
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
 
         # disposition: "inline" によりPDFはダウンロードではなく画面に表示される
         send_data pdf.render,
-          filename:    "test.pdf",
+          filename:    "全農あきた発注書#{@post['record']['date']['value']}.pdf",
           type:        "application/pdf",
           disposition: "inline"
       end
@@ -55,12 +56,12 @@ class PostsController < ApplicationController
       res = http.request(req)
       case res.code.to_i
       when 200
-        pp JSON.parse(res.body)
+        JSON.parse(res.body)
         cursor = JSON.parse(res.body)["id"]
-        pp cursor
+        cursor
       else
-        pp %Q(#{res.code} #{res.message})
-        pp JSON.parse(res.body)
+        %Q(#{res.code} #{res.message})
+        JSON.parse(res.body)
       end
     }
 
@@ -72,7 +73,7 @@ class PostsController < ApplicationController
       res = http.request(req)
       case res.code.to_i
       when 200
-        pp JSON.pretty_generate(JSON.parse(res.body))
+        JSON.pretty_generate(JSON.parse(res.body))
         @post = JSON.pretty_generate(JSON.parse(res.body))
         # @post = JSON.pretty_generate(JSON.parse(res.body)["records"].find { |h| h['レコード番号']['value'] == '2' }['ea']['value'])
         # @post = JSON.parse(res.body)["records"].find { |h| h['レコード番号']['value'] == '2' }['ea']['value']
@@ -80,10 +81,10 @@ class PostsController < ApplicationController
         # @post3 = JSON.parse(res.body)["records"].find { |h| h['レコード番号']['value'] == '2' }['ja']['value']
         # @post4 = JSON.parse(res.body)["records"].find { |h| h['レコード番号']['value'] == '2' }['ja_price']['value']
       else
-        pp %Q(#{res.code} #{res.message})
-        pp JSON.parse(res.body)
+        %Q(#{res.code} #{res.message})
+        JSON.parse(res.body)
       end
     }
-    render json: @post
+    # render json: @post
   end
 end

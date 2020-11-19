@@ -1,6 +1,7 @@
-<h1>テスト</h1>
-<%= @post1 %><br>
-<%= @post2 %><br>
-<%= @post3 %><br>
-<%= @post4 %>
-<%= link_to '外部サイトへ', url_with_params('http://localhost:3000/posts/', @params_to_transit) %>
+<div class="center">
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <button class="btn">ログアウト</button>
+    <% end %>
+  <% end %>
+</div>

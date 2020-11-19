@@ -8,4 +8,16 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   validates :username, uniqueness: true
+
+  def remember_me
+    true
+  end
+
+  def email_required?
+    false
+  end
+  
+  def email_changed?
+    false
+  end
 end
