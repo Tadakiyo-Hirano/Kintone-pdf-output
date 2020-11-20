@@ -10,7 +10,7 @@
   </head>
 
   <body>        
-    <p class="notice center"><%= notice %></p>
+    <p class="notice center"><%= notice unless user_signed_in? %></p>
     <p class="alert center"><%= alert %></p>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>

@@ -1,4 +1,4 @@
-class KintonePdf < Prawn::Document  
+class KintonePdf < Prawn::Document
   include ApplicationHelper
 
   def initialize(post)
