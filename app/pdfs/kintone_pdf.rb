@@ -152,6 +152,8 @@ class KintonePdf < Prawn::Document
     draw_text "(全農渡)", size: 11, at: [606, 418]
     draw_text "備考", size: 11, at: [670, 424]
 
+    note_size = 6
+
     if @post["record"]['table']['value'][0].present?
       record_id = 0
       row_1 = 378
@@ -191,7 +193,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 397]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 388]
     end
 
     if @post["record"]['table']['value'][1].present?
@@ -233,7 +236,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 360]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 351]
     end
 
     if @post["record"]['table']['value'][2].present?
@@ -275,7 +279,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 323]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 314]
     end
 
     if @post["record"]['table']['value'][3].present?
@@ -317,7 +322,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 286]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 277]
     end
 
     if @post["record"]['table']['value'][4].present?
@@ -359,7 +365,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 249]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 240]
     end
 
     if @post["record"]['table']['value'][5].present?
@@ -401,7 +408,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 212]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 203]
     end
 
     if @post["record"]['table']['value'][6].present?
@@ -443,7 +451,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 175]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 166]
     end
 
     if @post["record"]['table']['value'][7].present?
@@ -485,7 +494,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 138]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 129]
     end
 
     if @post["record"]['table']['value'][8].present?
@@ -527,7 +537,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 101]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 92]
     end
 
     if @post["record"]['table']['value'][9].present?
@@ -569,7 +580,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 64]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 55]
     end
 
     if @post["record"]['table']['value'][10].present?
@@ -611,7 +623,8 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-6], size: 10, at: [619, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['z_price']['value'][-7], size: 10, at: [612, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['list_price']['value'], size: 8, at: [column_1, 27]
-      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: 8, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, row_1]
+      draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 18]
     end
 
     bounding_box([0, 410], width: 770, height: 800
