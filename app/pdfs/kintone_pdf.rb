@@ -30,9 +30,6 @@ class KintonePdf < Prawn::Document
       draw_text date, size: 11, at: [529, 463]
     end
 
-    # draw_text @post['record']['jp_date']['value'], size: 11, at: [530, 463]
-    # draw_text @post['record']['jp_date']['value'], size: 11, at: [530, 463]
-
     bounding_box([640, 477], width: 90, height: 20) {
       # border_development
 
@@ -173,7 +170,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -216,7 +219,12 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -259,7 +267,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -302,7 +316,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -345,7 +365,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -388,7 +414,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -431,7 +463,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -474,7 +512,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -517,7 +561,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -560,7 +610,13 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
+
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]
@@ -603,7 +659,12 @@ class KintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][4], size: 12, at: [185, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][5], size: 12, at: [200, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['order_number']['value'][6], size: 12, at: [215, row_2]
-      draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+
+      if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value'], size: 9, at: [243, row_1]
+      else
+        draw_text @post["record"]['table']['value'][record_id]['value']['product_name']['value'], size: 9, at: [243, row_1]
+      end
       draw_text @post["record"]['table']['value'][record_id]['value']['delivery_date']['value'], size: 9, at: [461, row_1]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-1], size: 10, at: [515, row_2]
       draw_text @post["record"]['table']['value'][record_id]['value']['quantity']['value'][-2], size: 10, at: [509, row_2]

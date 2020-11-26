@@ -14,15 +14,21 @@ class PostsController < ApplicationController
 
     Net::HTTP.start(uri.host, uri.port, :use_ssl => true) {|http|
       res = http.request(req)
-      case res.code.to_i
-      when 200
-        @post = JSON.parse(res.body)
-        # @post = JSON.pretty_generate(JSON.parse(res.body))
-      else
-        %Q(#{res.code} #{res.message})
-        JSON.parse(res.body)
-      end
+      res.code.to_i
+      @post = JSON.parse(res.body)
     }
+
+    # Net::HTTP.start(uri.host, uri.port, :use_ssl => true) {|http|
+    #   res = http.request(req)
+    #   case res.code.to_i
+    #   when 200
+    #     @post = JSON.parse(res.body)
+    #     # @post = JSON.pretty_generate(JSON.parse(res.body))
+    #   else
+    #     %Q(#{res.code} #{res.message})
+    #     JSON.parse(res.body)
+    #   end
+    # }
     
     respond_to do |format|
       format.html

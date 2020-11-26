@@ -5,15 +5,11 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-      <%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "btn" %>
+      <div class="left">
+        <%= f.label :username %><br />
+        <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "btn" %>
     </div>
-
     <br />
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autocomplete: "email", class: "btn" %>
-    </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -21,11 +17,13 @@
     <br />
 
     <div class="field">
-      <br />
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "新しいパスワード(6文字以上)", class: "btn" %>
-      <% if @minimum_password_length %>
-        <br />
-      <% end %>
+      <div class="left">
+        <%= f.label "パスワード変更" %><br />
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "新しいパスワード(6文字以上)", class: "btn" %>
+        <% if @minimum_password_length %>
+          <br />
+        <% end %>
+      </div>
     </div>
 
     <div class="field">
