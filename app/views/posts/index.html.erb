@@ -4,6 +4,7 @@
       <button class="btn">ログアウト</button>
     <% end %>
     <p class="msg">ログイン中です、画面を閉じてください。</p>
-    <%= link_to "アカウント情報", user_path(current_user) %>    
+    <%= link_to "アカウント情報", user_path(current_user) %><br />
+    <%= link_to "レコード情報", kintone_app_path(1) %> 
   <% end %>
 </div>

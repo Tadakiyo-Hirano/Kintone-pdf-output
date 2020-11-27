@@ -1,0 +1,22 @@
+<div class="center">
+  <p><%= flash[:notice] %></p>
+  <%= form_with(model: @app, local: true) do |f| %>
+    <p>アプリID</p>
+    <p><%= f.text_field :app_id, class: "btn" %></p>
+    
+    <p><%= f.submit "アプリID更新", class: "btn" %></p>
+    <p><%= link_to "戻る", kintone_app_path %></p>
+  <% end %>
+
+  <br />
+
+  <%= form_with(model: @domain, url: domain_update_kintone_app_path, local: true, method: :patch) do |f| %>
+    <p>ドメイン情報</p>
+    <p><%= f.text_field :domain, placeholder: "DOMAIN", class: "btn" %></p>
+    <p><%= f.text_field :k_id, placeholder: "ID", class: "btn" %></p>
+    <p><%= f.text_field :k_pass, placeholder: "PASSWORD", class: "btn" %></p>
+    <p><%= f.text_field :token, placeholder: "TOKEN", class: "btn" %></p>
+    
+    <p><%= f.submit "ドメイン更新", class: "btn", data: { confirm: "更新してよろしいですか？" } %></p>
+  <% end %>
+</div>

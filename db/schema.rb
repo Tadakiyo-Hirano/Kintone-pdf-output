@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_18_073449) do
+ActiveRecord::Schema.define(version: 2020_11_27_064541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "kintone_apps", force: :cascade do |t|
+    t.integer "app_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "domain"
+    t.string "k_id"
+    t.string "k_pass"
+    t.string "token"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

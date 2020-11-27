@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     req = Net::HTTP::Get.new(uri.path)
     req['X-Cybozu-API-Token'] = api_token
     req['Content-Type'] = 'application/json'
-    req.body = JSON.generate({"app": "62", "id": record_id })
+    req.body = JSON.generate({"app": KintoneApp.find(1).app_id, "id": record_id })
 
     Net::HTTP.start(uri.host, uri.port, :use_ssl => true) {|http|
       res = http.request(req)

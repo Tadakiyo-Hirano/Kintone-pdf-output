@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'kintone_apps/show'
+  get 'kintone_apps/edit'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -14,4 +16,9 @@ Rails.application.routes.draw do
   
   resources :users
   resources :posts, only: %i(show)
+  resources :kintone_apps, only: %i(show edit update domain_update) do
+    member do
+      patch 'domain_update'
+    end
+  end
 end
