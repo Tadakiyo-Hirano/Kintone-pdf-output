@@ -37,11 +37,11 @@ class KintoneAppsController < ApplicationController
   private
 
     def set_app
-      @app = KintoneApp.find(1)
+      @app = KintoneApp.find(params[:id])
     end
 
     def set_domain
-      @domain = KintoneApp.find(1)
+      @domain = KintoneApp.find(params[:id])
     end
 
     def app_params

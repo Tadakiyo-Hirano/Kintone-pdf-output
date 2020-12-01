@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'kintone_apps/show'
-  get 'kintone_apps/edit'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
