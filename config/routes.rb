@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :posts, only: %i(show)
+  resources :new_posts, only: %i(show)
   resources :kintone_apps, only: %i(show edit update domain_update) do
     member do
       patch 'domain_update'

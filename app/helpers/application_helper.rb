@@ -1,5 +1,18 @@
 module ApplicationHelper
 
+  def product_name(record_id)
+    # record_id = 0
+    if @post["record"]['table']['value'][record_id]['value']['product_check']['value'] == ["する"]
+      @post["record"]['table']['value'][record_id]['value']['product_name_manual']['value']
+    else
+      @post["record"]['table']['value'][record_id]['value']['product_name']['value']
+    end
+  end
+
+  def normal_ja_price(record_id)
+    @post["record"]['table']['value'][record_id]['value']['normal_ja_price']['value']
+  end
+
   YOHAKU = 2 #文字間隔調整の値
   # Options
   # at (required),  [x,y] The position at which to start the text

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def show
     k = KintoneApp.find(1)
     record_id = params[:id]
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     #     JSON.parse(res.body)
     #   end
     # }
-    
+
     respond_to do |format|
       format.html
       format.pdf do
