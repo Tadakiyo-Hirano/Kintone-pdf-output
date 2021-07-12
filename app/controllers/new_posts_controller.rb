@@ -1,4 +1,6 @@
 class NewPostsController < ApplicationController
+  before_action :authenticate_user!
+  
   def show
     k = KintoneApp.find(1)
     record_id = params[:id]
