@@ -72,8 +72,8 @@ class KintonePdf < Prawn::Document
       if name.length  <= 0
         nil
       elsif name.length  <= 1
-       vertical_text name, size: 27, at: [727, 460]
-       stroke_circle [740,470], 15
+        vertical_text name, size: 27, at: [727, 460]
+        stroke_circle [740,470], 15
       elsif name.length <= 2
         vertical_text name, size: 13, at: [734, 473]
         stroke_circle [740,470], 15
@@ -90,9 +90,9 @@ class KintonePdf < Prawn::Document
     draw_text "出荷先コード", size: 11, at: [20, 482]
     draw_text "出 荷 先 名", size: 11, at: [150, 482]
     draw_text "区分", size: 11, at: [262, 482]
-    draw_text "9240", size: 11, at: [40, 465]
-    draw_text "秋田マッカラー(株)", size: 11, at: [130, 465]
-    draw_text "2", size: 11, at: [270, 465]
+    draw_text @post["record"]['shipping_code']['value'], size: 11, at: [40, 465]
+    draw_text @post["record"]['company_name']['value'], size: 11, at: [120, 465]
+    draw_text @post["record"]['classification']['value'], size: 11, at: [270, 465]
 
     bounding_box([0, 450], width: 770, height: 445
     ) {
