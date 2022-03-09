@@ -280,7 +280,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 395]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 388]
       draw_text "農協(当用)#{normal_ja_price(0).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 381] unless normal_ja_price(0).blank?
-      draw_text "全農(当用)#{normal_ja_price(0).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 374] unless normal_ja_price(0).blank?
+      draw_text "全農(当用)#{normal_z_price(0).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 374] unless normal_z_price(0).blank?
     end
 
     # 2行目
@@ -406,7 +406,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 357]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 350]
       draw_text "農協(当用)#{normal_ja_price(1).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 343] unless normal_ja_price(1).blank?
-      draw_text "全農(当用)#{normal_ja_price(1).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 336] unless normal_ja_price(1).blank?
+      draw_text "全農(当用)#{normal_z_price(1).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 336] unless normal_z_price(1).blank?
     end
 
     # 3行目
@@ -532,7 +532,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 319]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 312]
       draw_text "農協(当用)#{normal_ja_price(2).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 305] unless normal_ja_price(2).blank?
-      draw_text "全農(当用)#{normal_ja_price(2).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 298] unless normal_ja_price(2).blank?
+      draw_text "全農(当用)#{normal_z_price(2).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 298] unless normal_z_price(2).blank?
     end
 
     # 4行目
@@ -657,7 +657,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 281]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 274]
       draw_text "農協(当用)#{normal_ja_price(3).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 267] unless normal_ja_price(3).blank?
-      draw_text "全農(当用)#{normal_ja_price(3).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 260] unless normal_ja_price(3).blank?
+      draw_text "全農(当用)#{normal_z_price(3).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 260] unless normal_z_price(3).blank?
     end
 
     # 5行目
@@ -782,7 +782,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 243]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 236]
       draw_text "農協(当用)#{normal_ja_price(4).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 229] unless normal_ja_price(4).blank?
-      draw_text "全農(当用)#{normal_ja_price(4).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 222] unless normal_ja_price(4).blank?
+      draw_text "全農(当用)#{normal_z_price(4).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 222] unless normal_z_price(4).blank?
     end
 
     # 6行目
@@ -907,7 +907,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 205]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 198]
       draw_text "農協(当用)#{normal_ja_price(5).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 191] unless normal_ja_price(5).blank?
-      draw_text "全農(当用)#{normal_ja_price(5).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 184] unless normal_ja_price(5).blank?
+      draw_text "全農(当用)#{normal_z_price(5).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 184] unless normal_z_price(5).blank?
     end
 
     # 7行目
@@ -1032,7 +1032,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 167]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 160]
       draw_text "農協(当用)#{normal_ja_price(6).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 153] unless normal_ja_price(6).blank?
-      draw_text "全農(当用)#{normal_ja_price(6).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 146] unless normal_ja_price(6).blank?
+      draw_text "全農(当用)#{normal_z_price(6).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 146] unless normal_z_price(6).blank?
     end
 
     # 8行目
@@ -1157,7 +1157,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 129]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 122]
       draw_text "農協(当用)#{normal_ja_price(7).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 115] unless normal_ja_price(7).blank?
-      draw_text "全農(当用)#{normal_ja_price(7).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 108] unless normal_ja_price(7).blank?
+      draw_text "全農(当用)#{normal_z_price(7).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 108] unless normal_z_price(7).blank?
     end
 
     # 9行目
@@ -1282,7 +1282,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 91]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 84]
       draw_text "農協(当用)#{normal_ja_price(8).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 77] unless normal_ja_price(8).blank?
-      draw_text "全農(当用)#{normal_ja_price(8).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 70] unless normal_ja_price(8).blank?
+      draw_text "全農(当用)#{normal_z_price(8).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 70] unless normal_z_price(8).blank?
     end
 
     # 10行目
@@ -1407,7 +1407,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 53]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 46]
       draw_text "農協(当用)#{normal_ja_price(9).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 39] unless normal_ja_price(9).blank?
-      draw_text "全農(当用)#{normal_ja_price(9).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 32] unless normal_ja_price(9).blank?
+      draw_text "全農(当用)#{normal_z_price(9).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 32] unless normal_z_price(9).blank?
     end
 
     # 11行目
@@ -1532,7 +1532,7 @@ class NewKintonePdf < Prawn::Document
       draw_text @post["record"]['table']['value'][record_id]['value']['note']['value'], size: note_size, at: [column_1, 15]
       draw_text @post["record"]['table']['value'][record_id]['value']['serial_number']['value'], size: note_size, at: [column_1, 8]
       draw_text "農協(当用)#{normal_ja_price(10).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, 1] unless normal_ja_price(10).blank?
-      draw_text "全農(当用)#{normal_ja_price(10).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, -6] unless normal_ja_price(10).blank?
+      draw_text "全農(当用)#{normal_z_price(10).to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')}", size: note_size, at: [column_1, -6] unless normal_z_price(10).blank?
     end
 
     bounding_box([0, 410], width: 770, height: 800
